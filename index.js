@@ -8,6 +8,7 @@ app.use(cors())
 
 app.use(bodyParser.json())
 app.use(morgan(':method :url :data :status :res[content-length] - :response-time ms'))
+app.use(express.static('build'))
 
 let persons = [
   {
