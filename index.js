@@ -169,8 +169,8 @@ app.put('/api/persons/:id', (request, response) => {
 
   Person
     .findByIdAndUpdate(request.params.id, person, { new: true } )
-    .then(updatedNote => {
-      response.json(updatedNote)
+    .then(updatedPerson => {
+      response.json(updatedPerson)
     })
     .catch(error => {
       console.log(error)
